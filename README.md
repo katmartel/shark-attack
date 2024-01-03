@@ -4,7 +4,7 @@
 > Open this page at [https://katmartel.github.io/shark-attack/](https://katmartel.github.io/shark-attack/)
 
 
-## Edit this project ![Build status badge](https://github.com/katmartel/shark-attack/workflows/MakeCode/badge.svg)
+## Edit this project 
 
 To edit this repository in MakeCode.
 
