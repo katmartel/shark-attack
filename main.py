@@ -26,8 +26,40 @@ def on_a_pressed():
     list2.append(shark)
 controller.A.on_event(ControllerButtonEvent.PRESSED, on_a_pressed)
 
+def TitleScreen():
+    scene.set_background_color(15)
+    game.set_dialog_text_color(15)
+    game.set_dialog_frame(img("""
+        ..bbbbbbbbbbbbbbbbbbbb..
+                .bd111111111111111111db.
+                bd1dbbbbbbbbbbbbbbbbd1db
+                b1dbbbbbbbbbbbbbbbbbbd1b
+                b1bd1111111111111111db1b
+                b1b111111111111111111b1b
+                b1b111111111111111111b1b
+                b1b111111111111111111b1b
+                b1b111111111111111111b1b
+                b1b111111111111111111b1b
+                b1b111111111111111111b1b
+                b1b111111111111111111b1b
+                b1b111111111111111111b1b
+                b1b111111111111111111b1b
+                b1b111111111111111111b1b
+                b1b111111111111111111b1b
+                b1b111111111111111111b1b
+                b1b111111111111111111b1b
+                b1b111111111111111111b1b
+                b1bd1111111111111111db1b
+                bd1bbbbbbbbbbbbbbbbbb1db
+                bbd111111111111111111dbb
+                .bbbbbbbbbbbbbbbbbbbbbb.
+                ..bbbbbbbbbbbbbbbbbbbb..
+    """))
+    game.show_long_text("Press 'A' to create sharks. \\n Press 'B' to remove sharks. \\n Move using the joystick.",
+        DialogLayout.CENTER)
 shark: Sprite = None
 list2: List[Sprite] = []
+TitleScreen()
 scene.set_background_image(img("""
     6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
         6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
