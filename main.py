@@ -2,30 +2,6 @@ def on_b_pressed():
     sprites.destroy(list2.pop())
 controller.B.on_event(ControllerButtonEvent.PRESSED, on_b_pressed)
 
-def on_a_pressed():
-    global shark
-    shark = sprites.create(img("""
-            ....................ccfff...........
-                    ..........fffffffffcbbbbf...........
-                    .........fbbbbbbbbbfffbf............
-                    .........fbb111bffbbbbff............
-                    .........fb11111ffbbbbbcff..........
-                    .........f1cccc11bbcbcbcccf.........
-                    ..........fc1c1c1bbbcbcbcccf...ccccc
-                    ............c3331bbbcbcbccccfccddbbc
-                    ...........c333c1bbbbbbbcccccbddbcc.
-                    ...........c331c11bbbbbcccccccbbcc..
-                    ..........cc13c111bbbbccccccffbccf..
-                    ..........c111111cbbbcccccbbc.fccf..
-                    ...........cc1111cbbbfdddddc..fbbcf.
-                    .............cccffbdbbfdddc....fbbf.
-                    ..................fbdbbfcc......fbbf
-                    ...................fffff.........fff
-        """),
-        SpriteKind.player)
-    list2.append(shark)
-controller.A.on_event(ControllerButtonEvent.PRESSED, on_a_pressed)
-
 def TitleScreen():
     scene.set_background_color(15)
     game.set_dialog_text_color(15)
@@ -57,6 +33,31 @@ def TitleScreen():
     """))
     game.show_long_text("Press 'A' to create sharks. \\n Press 'B' to remove sharks. \\n Move using the joystick.",
         DialogLayout.CENTER)
+
+def on_a_pressed():
+    global shark
+    shark = sprites.create(img("""
+            ....................ccfff...........
+                    ..........fffffffffcbbbbf...........
+                    .........fbbbbbbbbbfffbf............
+                    .........fbb111bffbbbbff............
+                    .........fb11111ffbbbbbcff..........
+                    .........f1cccc11bbcbcbcccf.........
+                    ..........fc1c1c1bbbcbcbcccf...ccccc
+                    ............c3331bbbcbcbccccfccddbbc
+                    ...........c333c1bbbbbbbcccccbddbcc.
+                    ...........c331c11bbbbbcccccccbbcc..
+                    ..........cc13c111bbbbccccccffbccf..
+                    ..........c111111cbbbcccccbbc.fccf..
+                    ...........cc1111cbbbfdddddc..fbbcf.
+                    .............cccffbdbbfdddc....fbbf.
+                    ..................fbdbbfcc......fbbf
+                    ...................fffff.........fff
+        """),
+        SpriteKind.player)
+    list2.append(shark)
+controller.A.on_event(ControllerButtonEvent.PRESSED, on_a_pressed)
+
 shark: Sprite = None
 list2: List[Sprite] = []
 TitleScreen()
